@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/stainless-sdks/greenflash-public-api-cli/internal/apiquery"
-	"github.com/stainless-sdks/greenflash-public-api-cli/internal/requestflag"
+	"github.com/greenflash-ai/greenflash-cli/internal/apiquery"
+	"github.com/greenflash-ai/greenflash-cli/internal/requestflag"
 	"github.com/stainless-sdks/greenflash-public-api-go"
 	"github.com/stainless-sdks/greenflash-public-api-go/option"
 	"github.com/tidwall/gjson"

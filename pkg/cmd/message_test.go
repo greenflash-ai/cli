@@ -5,8 +5,8 @@ package cmd
 import (
 	"testing"
 
-	"github.com/stainless-sdks/greenflash-public-api-cli/internal/mocktest"
-	"github.com/stainless-sdks/greenflash-public-api-cli/internal/requestflag"
+	"github.com/greenflash-ai/greenflash-cli/internal/mocktest"
+	"github.com/greenflash-ai/greenflash-cli/internal/requestflag"
 )
 
 func TestMessagesCreate(t *testing.T) {
