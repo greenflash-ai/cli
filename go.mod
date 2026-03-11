@@ -1,4 +1,4 @@
-module github.com/stainless-sdks/greenflash-public-api-cli
+module github.com/greenflash-ai/greenflash-cli
 
 go 1.25
 
@@ -10,7 +10,7 @@ require (
 	github.com/goccy/go-yaml v1.18.0
 	github.com/itchyny/json2yaml v0.1.4
 	github.com/muesli/reflow v0.3.0
-	github.com/stainless-sdks/greenflash-public-api-go v0.0.0-20260311190149-6dd7f957e3ae
+	github.com/stainless-sdks/greenflash-public-api-go v0.0.0-20260311190723-e6c90706ac72
 	github.com/stretchr/testify v1.10.0
 	github.com/tidwall/gjson v1.18.0
 	github.com/tidwall/pretty v1.2.1

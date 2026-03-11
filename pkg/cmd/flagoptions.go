@@ -14,10 +14,10 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"github.com/stainless-sdks/greenflash-public-api-cli/internal/apiform"
-	"github.com/stainless-sdks/greenflash-public-api-cli/internal/apiquery"
-	"github.com/stainless-sdks/greenflash-public-api-cli/internal/debugmiddleware"
-	"github.com/stainless-sdks/greenflash-public-api-cli/internal/requestflag"
+	"github.com/greenflash-ai/greenflash-cli/internal/apiform"
+	"github.com/greenflash-ai/greenflash-cli/internal/apiquery"
+	"github.com/greenflash-ai/greenflash-cli/internal/debugmiddleware"
+	"github.com/greenflash-ai/greenflash-cli/internal/requestflag"
 	"github.com/stainless-sdks/greenflash-public-api-go/option"
 
 	"github.com/goccy/go-yaml"

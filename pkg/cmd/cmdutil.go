@@ -16,7 +16,7 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/stainless-sdks/greenflash-public-api-cli/internal/jsonview"
+	"github.com/greenflash-ai/greenflash-cli/internal/jsonview"
 	"github.com/stainless-sdks/greenflash-public-api-go/option"
 
 	"github.com/charmbracelet/x/term"
