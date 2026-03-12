@@ -5,8 +5,8 @@ package cmd
 import (
 	"testing"
 
-	"github.com/greenflash-ai/greenflash-cli/internal/mocktest"
-	"github.com/greenflash-ai/greenflash-cli/internal/requestflag"
+	"github.com/greenflash-ai/cli/internal/mocktest"
+	"github.com/greenflash-ai/cli/internal/requestflag"
 )
 
 func TestMessagesCreate(t *testing.T) {
@@ -15,11 +15,11 @@ func TestMessagesCreate(t *testing.T) {
 			t, "messages", "create",
 			"--api-key", "string",
 			"--external-user-id", "user-123",
-			"--message", "{content: Hello!, context: context, createdAt: '2019-12-27T18:11:19.117Z', externalMessageId: user-msg-1, input: {foo: bar}, messageType: user_message, model: model, output: {foo: bar}, parentExternalMessageId: parentExternalMessageId, parentMessageId: 182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e, properties: {foo: bar}, role: user, toolName: toolName}",
-			"--message", "{content: Hi there! How can I help you?, context: context, createdAt: '2019-12-27T18:11:19.117Z', externalMessageId: assistant-msg-1, input: {foo: bar}, messageType: user_message, model: model, output: {foo: bar}, parentExternalMessageId: parentExternalMessageId, parentMessageId: 182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e, properties: {foo: bar}, role: assistant, toolName: toolName}",
-			"--message", "{content: Calling search tool, context: context, createdAt: '2019-12-27T18:11:19.117Z', externalMessageId: tool-call-1, input: {query: bar}, messageType: tool_call, model: model, output: {foo: bar}, parentExternalMessageId: parentExternalMessageId, parentMessageId: 182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e, properties: {foo: bar}, role: user, toolName: web_search}",
-			"--message", "{content: Search completed, context: context, createdAt: '2019-12-27T18:11:19.117Z', externalMessageId: tool-result-1, input: {foo: bar}, messageType: observation, model: model, output: {results: bar}, parentExternalMessageId: tool-call-1, parentMessageId: 182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e, properties: {foo: bar}, role: user, toolName: toolName}",
-			"--message", "{content: 'Based on the search, today will be sunny with a high of 75°F.', context: context, createdAt: '2019-12-27T18:11:19.117Z', externalMessageId: final-1, input: {foo: bar}, messageType: final_response, model: model, output: {foo: bar}, parentExternalMessageId: parentExternalMessageId, parentMessageId: 182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e, properties: {foo: bar}, role: user, toolName: toolName}",
+			"--message", "{content: Hello!, context: context, createdAt: '2019-12-27', externalMessageId: user-msg-1, input: {foo: bar}, messageType: user_message, model: model, output: {foo: bar}, parentExternalMessageId: parentExternalMessageId, parentMessageId: 182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e, properties: {foo: bar}, role: user, toolName: toolName}",
+			"--message", "{content: Hi there! How can I help you?, context: context, createdAt: '2019-12-27', externalMessageId: assistant-msg-1, input: {foo: bar}, messageType: user_message, model: model, output: {foo: bar}, parentExternalMessageId: parentExternalMessageId, parentMessageId: 182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e, properties: {foo: bar}, role: assistant, toolName: toolName}",
+			"--message", "{content: Calling search tool, context: context, createdAt: '2019-12-27', externalMessageId: tool-call-1, input: {query: bar}, messageType: tool_call, model: model, output: {foo: bar}, parentExternalMessageId: parentExternalMessageId, parentMessageId: 182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e, properties: {foo: bar}, role: user, toolName: web_search}",
+			"--message", "{content: Search completed, context: context, createdAt: '2019-12-27', externalMessageId: tool-result-1, input: {foo: bar}, messageType: observation, model: model, output: {results: bar}, parentExternalMessageId: tool-call-1, parentMessageId: 182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e, properties: {foo: bar}, role: user, toolName: toolName}",
+			"--message", "{content: 'Based on the search, today will be sunny with a high of 75°F.', context: context, createdAt: '2019-12-27', externalMessageId: final-1, input: {foo: bar}, messageType: final_response, model: model, output: {foo: bar}, parentExternalMessageId: parentExternalMessageId, parentMessageId: 182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e, properties: {foo: bar}, role: user, toolName: toolName}",
 			"--conversation-id", "182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e",
 			"--external-conversation-id", "conv-456",
 			"--external-organization-id", "org-789",
@@ -43,7 +43,7 @@ func TestMessagesCreate(t *testing.T) {
 			"--external-user-id", "user-123",
 			"--message.content", "Hello!",
 			"--message.context", "context",
-			"--message.created-at", "2019-12-27T18:11:19.117Z",
+			"--message.created-at", "2019-12-27",
 			"--message.external-message-id", "user-msg-1",
 			"--message.input", "{foo: bar}",
 			"--message.message-type", "user_message",
@@ -56,7 +56,7 @@ func TestMessagesCreate(t *testing.T) {
 			"--message.tool-name", "toolName",
 			"--message.content", "Hi there! How can I help you?",
 			"--message.context", "context",
-			"--message.created-at", "2019-12-27T18:11:19.117Z",
+			"--message.created-at", "2019-12-27",
 			"--message.external-message-id", "assistant-msg-1",
 			"--message.input", "{foo: bar}",
 			"--message.message-type", "user_message",
@@ -69,7 +69,7 @@ func TestMessagesCreate(t *testing.T) {
 			"--message.tool-name", "toolName",
 			"--message.content", "Calling search tool",
 			"--message.context", "context",
-			"--message.created-at", "2019-12-27T18:11:19.117Z",
+			"--message.created-at", "2019-12-27",
 			"--message.external-message-id", "tool-call-1",
 			"--message.input", "{query: bar}",
 			"--message.message-type", "tool_call",
@@ -82,7 +82,7 @@ func TestMessagesCreate(t *testing.T) {
 			"--message.tool-name", "web_search",
 			"--message.content", "Search completed",
 			"--message.context", "context",
-			"--message.created-at", "2019-12-27T18:11:19.117Z",
+			"--message.created-at", "2019-12-27",
 			"--message.external-message-id", "tool-result-1",
 			"--message.input", "{foo: bar}",
 			"--message.message-type", "observation",
@@ -95,7 +95,7 @@ func TestMessagesCreate(t *testing.T) {
 			"--message.tool-name", "toolName",
 			"--message.content", "Based on the search, today will be sunny with a high of 75°F.",
 			"--message.context", "context",
-			"--message.created-at", "2019-12-27T18:11:19.117Z",
+			"--message.created-at", "2019-12-27",
 			"--message.external-message-id", "final-1",
 			"--message.input", "{foo: bar}",
 			"--message.message-type", "final_response",
@@ -125,7 +125,7 @@ func TestMessagesCreate(t *testing.T) {
 			"messages:\n" +
 			"  - content: Hello!\n" +
 			"    context: context\n" +
-			"    createdAt: '2019-12-27T18:11:19.117Z'\n" +
+			"    createdAt: '2019-12-27'\n" +
 			"    externalMessageId: user-msg-1\n" +
 			"    input:\n" +
 			"      foo: bar\n" +
@@ -141,7 +141,7 @@ func TestMessagesCreate(t *testing.T) {
 			"    toolName: toolName\n" +
 			"  - content: Hi there! How can I help you?\n" +
 			"    context: context\n" +
-			"    createdAt: '2019-12-27T18:11:19.117Z'\n" +
+			"    createdAt: '2019-12-27'\n" +
 			"    externalMessageId: assistant-msg-1\n" +
 			"    input:\n" +
 			"      foo: bar\n" +
@@ -157,7 +157,7 @@ func TestMessagesCreate(t *testing.T) {
 			"    toolName: toolName\n" +
 			"  - content: Calling search tool\n" +
 			"    context: context\n" +
-			"    createdAt: '2019-12-27T18:11:19.117Z'\n" +
+			"    createdAt: '2019-12-27'\n" +
 			"    externalMessageId: tool-call-1\n" +
 			"    input:\n" +
 			"      query: bar\n" +
@@ -173,7 +173,7 @@ func TestMessagesCreate(t *testing.T) {
 			"    toolName: web_search\n" +
 			"  - content: Search completed\n" +
 			"    context: context\n" +
-			"    createdAt: '2019-12-27T18:11:19.117Z'\n" +
+			"    createdAt: '2019-12-27'\n" +
 			"    externalMessageId: tool-result-1\n" +
 			"    input:\n" +
 			"      foo: bar\n" +
@@ -189,7 +189,7 @@ func TestMessagesCreate(t *testing.T) {
 			"    toolName: toolName\n" +
 			"  - content: Based on the search, today will be sunny with a high of 75°F.\n" +
 			"    context: context\n" +
-			"    createdAt: '2019-12-27T18:11:19.117Z'\n" +
+			"    createdAt: '2019-12-27'\n" +
 			"    externalMessageId: final-1\n" +
 			"    input:\n" +
 			"      foo: bar\n" +

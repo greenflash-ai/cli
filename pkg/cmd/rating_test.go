@@ -5,7 +5,7 @@ package cmd
 import (
 	"testing"
 
-	"github.com/greenflash-ai/greenflash-cli/internal/mocktest"
+	"github.com/greenflash-ai/cli/internal/mocktest"
 )
 
 func TestRatingsLog(t *testing.T) {
@@ -22,7 +22,7 @@ func TestRatingsLog(t *testing.T) {
 			"--external-message-id", "externalMessageId",
 			"--feedback", "Helpful response!",
 			"--message-id", "messageId",
-			"--rated-at", "'2025-07-09T09:00:00Z'",
+			"--rated-at", "'2019-12-27'",
 		)
 	})
 
@@ -38,7 +38,7 @@ func TestRatingsLog(t *testing.T) {
 			"externalMessageId: externalMessageId\n" +
 			"feedback: Helpful response!\n" +
 			"messageId: messageId\n" +
-			"ratedAt: '2025-07-09T09:00:00Z'\n")
+			"ratedAt: '2019-12-27'\n")
 		mocktest.TestRunMockTestWithPipeAndFlags(
 			t, pipeData, "ratings", "log",
 			"--api-key", "string",

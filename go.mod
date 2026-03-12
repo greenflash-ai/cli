@@ -1,4 +1,4 @@
-module github.com/greenflash-ai/greenflash-cli
+module github.com/greenflash-ai/cli
 
 go 1.25
 
@@ -8,9 +8,9 @@ require (
 	github.com/charmbracelet/lipgloss v1.1.0
 	github.com/charmbracelet/x/term v0.2.1
 	github.com/goccy/go-yaml v1.18.0
+	github.com/greenflash-ai/go v0.0.2
 	github.com/itchyny/json2yaml v0.1.4
 	github.com/muesli/reflow v0.3.0
-	github.com/stainless-sdks/greenflash-public-api-go v0.0.0-20260311190723-e6c90706ac72
 	github.com/stretchr/testify v1.10.0
 	github.com/tidwall/gjson v1.18.0
 	github.com/tidwall/pretty v1.2.1
