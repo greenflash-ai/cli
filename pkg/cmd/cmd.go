@@ -12,8 +12,8 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/greenflash-ai/greenflash-cli/internal/autocomplete"
-	"github.com/greenflash-ai/greenflash-cli/internal/requestflag"
+	"github.com/greenflash-ai/cli/internal/autocomplete"
+	"github.com/greenflash-ai/cli/internal/requestflag"
 	docs "github.com/urfave/cli-docs/v3"
 	"github.com/urfave/cli/v3"
 )
