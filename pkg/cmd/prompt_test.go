@@ -5,8 +5,8 @@ package cmd
 import (
 	"testing"
 
-	"github.com/greenflash-ai/greenflash-cli/internal/mocktest"
-	"github.com/greenflash-ai/greenflash-cli/internal/requestflag"
+	"github.com/greenflash-ai/cli/internal/mocktest"
+	"github.com/greenflash-ai/cli/internal/requestflag"
 )
 
 func TestPromptsCreate(t *testing.T) {
