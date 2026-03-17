@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.1.2 (2026-03-17)
+
+Full Changelog: [v0.1.1...v0.1.2](https://github.com/greenflash-ai/cli/compare/v0.1.1...v0.1.2)
+
+### Bug Fixes
+
+* better support passing client args in any position ([2b2b450](https://github.com/greenflash-ai/cli/commit/2b2b45031c6dfa0652a4d244a7d97b3e3510b740))
+* improved workflow for developing on branches ([151049a](https://github.com/greenflash-ai/cli/commit/151049a019c5b98feee448398341bb7169fecd7d))
+* no longer require an API key when building on production repos ([47940a0](https://github.com/greenflash-ai/cli/commit/47940a030b91d40f1bc3d55f4cbd2e9b488917e4))
+
+
+### Chores
+
+* **internal:** tweak CI branches ([46c12f5](https://github.com/greenflash-ai/cli/commit/46c12f54efd11b4ab0a6c7c71806b0b7c6a7b1b9))
+
 ## 0.1.1 (2026-03-14)
 
 Full Changelog: [v0.1.0...v0.1.1](https://github.com/greenflash-ai/cli/compare/v0.1.0...v0.1.1)
