@@ -11,8 +11,9 @@ import (
 func TestEventsCreate(t *testing.T) {
 	t.Run("regular flags", func(t *testing.T) {
 		mocktest.TestRunMockTestWithFlags(
-			t, "events", "create",
+			t,
 			"--api-key", "string",
+			"events", "create",
 			"--event-type", "x",
 			"--product-id", "182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e",
 			"--value", "value",
@@ -55,8 +56,9 @@ func TestEventsCreate(t *testing.T) {
 			"userId: 182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e\n" +
 			"valueType: currency\n")
 		mocktest.TestRunMockTestWithPipeAndFlags(
-			t, pipeData, "events", "create",
+			t, pipeData,
 			"--api-key", "string",
+			"events", "create",
 		)
 	})
 }

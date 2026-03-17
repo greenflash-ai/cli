@@ -12,8 +12,9 @@ import (
 func TestMessagesCreate(t *testing.T) {
 	t.Run("regular flags", func(t *testing.T) {
 		mocktest.TestRunMockTestWithFlags(
-			t, "messages", "create",
+			t,
 			"--api-key", "string",
+			"messages", "create",
 			"--external-user-id", "user-123",
 			"--message", "{content: Hello!, context: context, createdAt: '2019-12-27', externalMessageId: user-msg-1, input: {foo: bar}, messageType: user_message, model: model, output: {foo: bar}, parentExternalMessageId: parentExternalMessageId, parentMessageId: 182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e, properties: {foo: bar}, role: user, toolName: toolName}",
 			"--message", "{content: Hi there! How can I help you?, context: context, createdAt: '2019-12-27', externalMessageId: assistant-msg-1, input: {foo: bar}, messageType: user_message, model: model, output: {foo: bar}, parentExternalMessageId: parentExternalMessageId, parentMessageId: 182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e, properties: {foo: bar}, role: assistant, toolName: toolName}",
@@ -38,8 +39,9 @@ func TestMessagesCreate(t *testing.T) {
 
 		// Alternative argument passing style using inner flags
 		mocktest.TestRunMockTestWithFlags(
-			t, "messages", "create",
+			t,
 			"--api-key", "string",
+			"messages", "create",
 			"--external-user-id", "user-123",
 			"--message.content", "Hello!",
 			"--message.context", "context",
@@ -227,8 +229,9 @@ func TestMessagesCreate(t *testing.T) {
 			"  variables:\n" +
 			"    foo: string\n")
 		mocktest.TestRunMockTestWithPipeAndFlags(
-			t, pipeData, "messages", "create",
+			t, pipeData,
 			"--api-key", "string",
+			"messages", "create",
 		)
 	})
 }
