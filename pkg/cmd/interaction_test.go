@@ -11,8 +11,9 @@ import (
 func TestInteractionsList(t *testing.T) {
 	t.Run("regular flags", func(t *testing.T) {
 		mocktest.TestRunMockTestWithFlags(
-			t, "interactions", "list",
+			t,
 			"--api-key", "string",
+			"interactions", "list",
 			"--limit", "1",
 			"--offset", "0",
 			"--page", "1",
@@ -25,8 +26,9 @@ func TestInteractionsList(t *testing.T) {
 func TestInteractionsGetInteractionAnalytics(t *testing.T) {
 	t.Run("regular flags", func(t *testing.T) {
 		mocktest.TestRunMockTestWithFlags(
-			t, "interactions", "get-interaction-analytics",
+			t,
 			"--api-key", "string",
+			"interactions", "get-interaction-analytics",
 			"--interaction-id", "182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e",
 			"--mode", "simple",
 		)

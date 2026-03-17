@@ -11,8 +11,9 @@ import (
 func TestUsersCreate(t *testing.T) {
 	t.Run("regular flags", func(t *testing.T) {
 		mocktest.TestRunMockTestWithFlags(
-			t, "users", "create",
+			t,
 			"--api-key", "string",
+			"users", "create",
 			"--external-user-id", "user-123",
 			"--anonymized=false",
 			"--email", "alice@example.com",
@@ -37,8 +38,9 @@ func TestUsersCreate(t *testing.T) {
 			"properties:\n" +
 			"  plan: bar\n")
 		mocktest.TestRunMockTestWithPipeAndFlags(
-			t, pipeData, "users", "create",
+			t, pipeData,
 			"--api-key", "string",
+			"users", "create",
 		)
 	})
 }
@@ -46,8 +48,9 @@ func TestUsersCreate(t *testing.T) {
 func TestUsersUpdate(t *testing.T) {
 	t.Run("regular flags", func(t *testing.T) {
 		mocktest.TestRunMockTestWithFlags(
-			t, "users", "update",
+			t,
 			"--api-key", "string",
+			"users", "update",
 			"--user-id", "userId",
 			"--anonymized=true",
 			"--email", "alice.updated@example.com",
@@ -71,8 +74,9 @@ func TestUsersUpdate(t *testing.T) {
 			"properties:\n" +
 			"  plan: bar\n")
 		mocktest.TestRunMockTestWithPipeAndFlags(
-			t, pipeData, "users", "update",
+			t, pipeData,
 			"--api-key", "string",
+			"users", "update",
 			"--user-id", "userId",
 		)
 	})
@@ -81,8 +85,9 @@ func TestUsersUpdate(t *testing.T) {
 func TestUsersList(t *testing.T) {
 	t.Run("regular flags", func(t *testing.T) {
 		mocktest.TestRunMockTestWithFlags(
-			t, "users", "list",
+			t,
 			"--api-key", "string",
+			"users", "list",
 			"--limit", "1",
 			"--offset", "0",
 			"--organization-id", "182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e",
@@ -94,8 +99,9 @@ func TestUsersList(t *testing.T) {
 func TestUsersGetUserAnalytics(t *testing.T) {
 	t.Run("regular flags", func(t *testing.T) {
 		mocktest.TestRunMockTestWithFlags(
-			t, "users", "get-user-analytics",
+			t,
 			"--api-key", "string",
+			"users", "get-user-analytics",
 			"--user-id", "182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e",
 			"--mode", "simple",
 			"--product-id", "182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e",

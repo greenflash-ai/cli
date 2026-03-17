@@ -11,8 +11,9 @@ import (
 func TestRatingsLog(t *testing.T) {
 	t.Run("regular flags", func(t *testing.T) {
 		mocktest.TestRunMockTestWithFlags(
-			t, "ratings", "log",
+			t,
 			"--api-key", "string",
+			"ratings", "log",
 			"--product-id", "182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e",
 			"--rating", "4",
 			"--rating-max", "5",
@@ -40,8 +41,9 @@ func TestRatingsLog(t *testing.T) {
 			"messageId: messageId\n" +
 			"ratedAt: '2019-12-27'\n")
 		mocktest.TestRunMockTestWithPipeAndFlags(
-			t, pipeData, "ratings", "log",
+			t, pipeData,
 			"--api-key", "string",
+			"ratings", "log",
 		)
 	})
 }
