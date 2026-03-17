@@ -12,8 +12,9 @@ import (
 func TestPromptsCreate(t *testing.T) {
 	t.Run("regular flags", func(t *testing.T) {
 		mocktest.TestRunMockTestWithFlags(
-			t, "prompts", "create",
+			t,
 			"--api-key", "string",
+			"prompts", "create",
 			"--component", "{content: 'You are a helpful assistant for {{productName}}. Greet {{userName}} warmly.', componentId: 182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e, externalComponentId: externalComponentId, isDynamic: false, name: Base Instructions, source: customer, type: system}",
 			"--name", "Customer Support Prompt",
 			"--product-id", "182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e",
@@ -30,8 +31,9 @@ func TestPromptsCreate(t *testing.T) {
 
 		// Alternative argument passing style using inner flags
 		mocktest.TestRunMockTestWithFlags(
-			t, "prompts", "create",
+			t,
 			"--api-key", "string",
+			"prompts", "create",
 			"--component.content", "You are a helpful assistant for {{productName}}. Greet {{userName}} warmly.",
 			"--component.component-id", "182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e",
 			"--component.external-component-id", "externalComponentId",
@@ -68,8 +70,9 @@ func TestPromptsCreate(t *testing.T) {
 			"externalPromptId: support-v1\n" +
 			"source: customer\n")
 		mocktest.TestRunMockTestWithPipeAndFlags(
-			t, pipeData, "prompts", "create",
+			t, pipeData,
 			"--api-key", "string",
+			"prompts", "create",
 		)
 	})
 }
@@ -77,8 +80,9 @@ func TestPromptsCreate(t *testing.T) {
 func TestPromptsUpdate(t *testing.T) {
 	t.Run("regular flags", func(t *testing.T) {
 		mocktest.TestRunMockTestWithFlags(
-			t, "prompts", "update",
+			t,
 			"--api-key", "string",
+			"prompts", "update",
 			"--id", "182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e",
 			"--component", "{content: 'You are a helpful assistant for {{productName}}. Always be polite to {{userName}}.', componentId: 182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e, externalComponentId: externalComponentId, isDynamic: true, name: Base Instructions V2, source: customer, type: system}",
 			"--description", "Updated description",
@@ -94,8 +98,9 @@ func TestPromptsUpdate(t *testing.T) {
 
 		// Alternative argument passing style using inner flags
 		mocktest.TestRunMockTestWithFlags(
-			t, "prompts", "update",
+			t,
 			"--api-key", "string",
+			"prompts", "update",
 			"--id", "182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e",
 			"--component.content", "You are a helpful assistant for {{productName}}. Always be polite to {{userName}}.",
 			"--component.component-id", "182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e",
@@ -129,8 +134,9 @@ func TestPromptsUpdate(t *testing.T) {
 			"role: role\n" +
 			"source: customer\n")
 		mocktest.TestRunMockTestWithPipeAndFlags(
-			t, pipeData, "prompts", "update",
+			t, pipeData,
 			"--api-key", "string",
+			"prompts", "update",
 			"--id", "182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e",
 		)
 	})
@@ -139,8 +145,9 @@ func TestPromptsUpdate(t *testing.T) {
 func TestPromptsList(t *testing.T) {
 	t.Run("regular flags", func(t *testing.T) {
 		mocktest.TestRunMockTestWithFlags(
-			t, "prompts", "list",
+			t,
 			"--api-key", "string",
+			"prompts", "list",
 			"--active-only=true",
 			"--include-archived=true",
 			"--limit", "100",
@@ -155,8 +162,9 @@ func TestPromptsList(t *testing.T) {
 func TestPromptsDelete(t *testing.T) {
 	t.Run("regular flags", func(t *testing.T) {
 		mocktest.TestRunMockTestWithFlags(
-			t, "prompts", "delete",
+			t,
 			"--api-key", "string",
+			"prompts", "delete",
 			"--id", "182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e",
 		)
 	})
@@ -165,8 +173,9 @@ func TestPromptsDelete(t *testing.T) {
 func TestPromptsGet(t *testing.T) {
 	t.Run("regular flags", func(t *testing.T) {
 		mocktest.TestRunMockTestWithFlags(
-			t, "prompts", "get",
+			t,
 			"--api-key", "string",
+			"prompts", "get",
 			"--id", "id",
 		)
 	})

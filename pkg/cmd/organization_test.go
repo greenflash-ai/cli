@@ -11,8 +11,9 @@ import (
 func TestOrganizationsCreate(t *testing.T) {
 	t.Run("regular flags", func(t *testing.T) {
 		mocktest.TestRunMockTestWithFlags(
-			t, "organizations", "create",
+			t,
 			"--api-key", "string",
+			"organizations", "create",
 			"--external-organization-id", "org-456",
 			"--name", "Acme Corporation",
 			"--properties", "{industry: bar, size: bar}",
@@ -28,8 +29,9 @@ func TestOrganizationsCreate(t *testing.T) {
 			"  industry: bar\n" +
 			"  size: bar\n")
 		mocktest.TestRunMockTestWithPipeAndFlags(
-			t, pipeData, "organizations", "create",
+			t, pipeData,
 			"--api-key", "string",
+			"organizations", "create",
 		)
 	})
 }
@@ -37,8 +39,9 @@ func TestOrganizationsCreate(t *testing.T) {
 func TestOrganizationsUpdate(t *testing.T) {
 	t.Run("regular flags", func(t *testing.T) {
 		mocktest.TestRunMockTestWithFlags(
-			t, "organizations", "update",
+			t,
 			"--api-key", "string",
+			"organizations", "update",
 			"--organization-id", "organizationId",
 			"--name", "Updated Organization Name",
 			"--properties", "{industry: bar, size: bar}",
@@ -53,8 +56,9 @@ func TestOrganizationsUpdate(t *testing.T) {
 			"  industry: bar\n" +
 			"  size: bar\n")
 		mocktest.TestRunMockTestWithPipeAndFlags(
-			t, pipeData, "organizations", "update",
+			t, pipeData,
 			"--api-key", "string",
+			"organizations", "update",
 			"--organization-id", "organizationId",
 		)
 	})
@@ -63,8 +67,9 @@ func TestOrganizationsUpdate(t *testing.T) {
 func TestOrganizationsList(t *testing.T) {
 	t.Run("regular flags", func(t *testing.T) {
 		mocktest.TestRunMockTestWithFlags(
-			t, "organizations", "list",
+			t,
 			"--api-key", "string",
+			"organizations", "list",
 			"--limit", "1",
 			"--offset", "0",
 			"--page", "1",
@@ -75,8 +80,9 @@ func TestOrganizationsList(t *testing.T) {
 func TestOrganizationsGetOrganizationAnalytics(t *testing.T) {
 	t.Run("regular flags", func(t *testing.T) {
 		mocktest.TestRunMockTestWithFlags(
-			t, "organizations", "get-organization-analytics",
+			t,
 			"--api-key", "string",
+			"organizations", "get-organization-analytics",
 			"--organization-id", "182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e",
 			"--mode", "simple",
 			"--product-id", "182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e",
