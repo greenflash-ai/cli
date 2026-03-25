@@ -1,5 +1,30 @@
 # Changelog
 
+## 0.1.3 (2026-03-25)
+
+Full Changelog: [v0.1.2...v0.1.3](https://github.com/greenflash-ai/cli/compare/v0.1.2...v0.1.3)
+
+### Bug Fixes
+
+* avoid reading from stdin unless request body is form encoded or json ([57c8237](https://github.com/greenflash-ai/cli/commit/57c8237091aead50b55c99affc5395b509fac868))
+* cli no longer hangs when stdin is attached to a pipe with empty input ([c7d8caa](https://github.com/greenflash-ai/cli/commit/c7d8caa92d667f30525fa91999167de53b80c72c))
+* improve linking behavior when developing on a branch not in the Go SDK ([13b88fe](https://github.com/greenflash-ai/cli/commit/13b88fe84abcae8a4498fb711d383ac1698c573d))
+
+
+### Chores
+
+* **ci:** skip lint on metadata-only changes ([eb3c77f](https://github.com/greenflash-ai/cli/commit/eb3c77f9493976f139c7d57c7606a31d6889f740))
+* **internal:** update gitignore ([8b5e563](https://github.com/greenflash-ai/cli/commit/8b5e563fab07db371ada13432beb03c6042eeeb9))
+* **tests:** bump steady to v0.19.4 ([2dad7f4](https://github.com/greenflash-ai/cli/commit/2dad7f4deb7c6f1222aa30b25cc56c18d3e584e1))
+* **tests:** bump steady to v0.19.5 ([4897bbb](https://github.com/greenflash-ai/cli/commit/4897bbbbb6936f6d9d8d652223158e04dfcfd5ec))
+* **tests:** bump steady to v0.19.6 ([c40e4a6](https://github.com/greenflash-ai/cli/commit/c40e4a66f68454c5f1eeac63010d0bd983a3cfcc))
+* **tests:** bump steady to v0.19.7 ([916eecf](https://github.com/greenflash-ai/cli/commit/916eecfe193632a6f2843aa0994b59b448038981))
+
+
+### Refactors
+
+* **tests:** switch from prism to steady ([6ac7aa6](https://github.com/greenflash-ai/cli/commit/6ac7aa6660aa258959f43419221e0c25ee7eff27))
+
 ## 0.1.2 (2026-03-17)
 
 Full Changelog: [v0.1.1...v0.1.2](https://github.com/greenflash-ai/cli/compare/v0.1.1...v0.1.2)
